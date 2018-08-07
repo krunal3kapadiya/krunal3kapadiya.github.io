@@ -37,3 +37,6 @@ kramdown:
 
 permalink: pretty
 exclude: [vendor]
+
+gems:
+  - jekyll-redirect-from

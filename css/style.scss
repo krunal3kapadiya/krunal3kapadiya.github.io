@@ -17,11 +17,11 @@ $reddit:         #cee3f8;
 $rss:            #eea33a;
 
 $darker:         #21211E;
-$dark:           #2D2D29;
-$medium:         #3B3B35;
+$dark:           #FCFCFC;
+$medium:         #f7f7f7;
 $light-medium:   #969696;
 $dark-blue:      #215A6D;
-$light-blue:     #3CA2A2;
+$light-blue:     #f49835;
 $green:          #92C7A3;
 $light:          #DFECE6;
 $white:          #FFFFFF;
@@ -30,6 +30,9 @@ $medium-purple:  #480048;
 $regular-purple: #601848;
 $red:            #C04848;
 $orange:         #F07241;
+$grey:			 #757575;
+$android-green:	 #3d9828;
+$android-dark:	 #455a64;
 
 /* Responsive sizes */
 $screen-sm-min: 768px;
@@ -47,7 +50,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	background-color: $dark;
-	color: $white;
+	color: $grey;
 	font-size: 16px;
 	height: 100%;
 	width: 100%
@@ -111,7 +114,7 @@ ul {
 }
 
 .menu-button {
-	color: $white;
+	color: $darker;
 	font-size: 24px;
 	position: fixed;
 	top: 10px;
@@ -178,6 +181,8 @@ ul {
 		-webkit-transition: 0.3s;
 		-moz-transition: 0.3s;
 		transition: 0.3s;
+		color: $grey;
+
 	}
 
 	.fa-twitter:hover {
@@ -319,14 +324,14 @@ ul {
 				font-size: 24px;
 
 				a:hover {
-					color: $light-medium;
+					color: $darker;
 				}
 
 				small {
 					font-size: 14px;
 					margin-top: -10px;
 					padding-top: 0px;
-					color: $light-medium;
+					color: $android-green;
 				}
 
 			}
@@ -341,7 +346,7 @@ ul {
 		}
 
 		a, a:active {
-			color: $white;
+			color: $grey;
 			white-space: nowrap;
 		}
 
@@ -760,11 +765,11 @@ ul {
 		}
 
 		a {
-			color: $white;
+			color: $grey;
 		}
 
 		a:hover {
-			color: $light;
+			color: $darker;
 		}
 	}
 
