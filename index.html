@@ -25,7 +25,79 @@ make-smaller-titles: true
 
             <div class="articles">
 
+              <h2>Github Repositories</h2>
+
+              <ul>
+                  {% for github in site.categories.github limit: site.post_limit %}
+
+                      <li>
+                          <a href="{{ github.url | prepend: site.baseurl }}">{{ github.title }}</a>
+                          <small class="hidden-xs">{{ github.date | date: "%B %-d, %Y" }}</small>
+                      </li>
+
+                  {% endfor %}
+                  <li>
+                      <small><i><a href="{{ site.baseurl }}/github/">more...</a></i></small>
+                  </li>
+              </ul>
+
+            </div>
+
+        </div>
+		
+		<div class="col-md-12 main content-panel">
+
+            <div class="articles">
+
+              <h2>Speaker deck</h2>
+
+              <ul>
+                  {% for deck in site.categories.deck limit: site.post_limit %}
+
+                      <li>
+                          <a href="{{ deck.url | prepend: site.baseurl }}">{{ deck.title }}</a>
+                          <small class="hidden-xs">{{ deck.date | date: "%B %-d, %Y" }}</small>
+                      </li>
+
+                  {% endfor %}
+                  <li>
+                      <small><i><a href="{{ site.baseurl }}/deck/">more...</a></i></small>
+                  </li>
+              </ul>
+
+            </div>
+
+        </div>
+		
+		<div class="col-md-12 main content-panel">
+
+            <div class="articles">
+
               <h2>Latest Articles</h2>
+
+              <ul>
+                  {% for article in site.categories.article limit: site.post_limit %}
+
+                      <li>
+                          <a href="{{ article.url | prepend: site.baseurl }}">{{ article.title }}</a>
+                          <small class="hidden-xs">{{ article.date | date: "%B %-d, %Y" }}</small>
+                      </li>
+
+                  {% endfor %}
+                  <li>
+                      <small><i><a href="{{ site.baseurl }}/posts/">more...</a></i></small>
+                  </li>
+              </ul>
+
+            </div>
+
+        </div>
+		
+		<div class="col-md-12 main content-panel">
+
+            <div class="articles">
+
+              <h2>AAD AND FLMND</h2>
 
               <ul>
                   {% for post in site.posts limit: site.post_limit %}
