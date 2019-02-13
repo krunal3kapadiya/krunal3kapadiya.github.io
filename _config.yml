@@ -25,8 +25,9 @@ url: "https://krunal3kapadiya.app" # the base hostname & protocol for your site
 # Social
 githubUsername: krunal3kapadiya
 twitterUsername: krunal3kapadiya
-dribbbleUsername:
-codepenUsername:
+mediumUsername: krunal3kapadiya
+linkedinUsername: krunal3kapadiya
+
 
 # Build settings
 markdown: kramdown

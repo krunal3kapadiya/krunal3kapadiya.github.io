@@ -2,7 +2,7 @@
 layout: deck
 title:  "Maths operations in Tensorflow"
 date:   2018-02-09 12:31:19 -0500
-categories: jekyll update
+categories: decks
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
