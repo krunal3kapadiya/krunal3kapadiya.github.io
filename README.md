@@ -1,1 +1,1 @@
-# Personal website of Krunal Kapadiya
+# Personal website
