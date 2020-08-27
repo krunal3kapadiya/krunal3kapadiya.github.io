@@ -1,207 +1,143 @@
-# Neumorphism <!-- omit in toc -->
+### devlopr-jekyll - A Beautiful Jekyll Theme Built for Developers
 
-> Neumorphism designed Jekyll theme for personal websites, portfolios and resumes.
+[![Gem Version](https://badge.fury.io/rb/devlopr.svg)](https://badge.fury.io/rb/devlopr)![workflow-badge](https://github.com/sujaykundu777/devlopr-jekyll/workflows/deploy/badge.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4232ac2b-63e0-4c78-92e0-e95aad5ab8c3/deploy-status)](https://app.netlify.com/sites/devlopr/deploys)
+![](https://ruby-gem-downloads-badge.herokuapp.com/devlopr?type=total&color=brightgreen&style=plastic)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
-* Featured on [JAMstack Themes](https://jamstackthemes.dev/theme/jekyll-neumorphism/)
-* Featured on [Jekyll Themes](https://jekyll-themes.com/neumorphism/)
-* Featured on [jekyllthemes](http://jekyllthemes.org/themes/neumorphism/)
+Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup.
+The Theme supports both Light and Dark Style. Highly Customizable and No Hosting or Maintainence Cost is required !
 
-[![Open Issues](https://badgen.net/github/open-issues/longpdo/neumorphism)](https://github.com/longpdo/neumorphism/issues)
-[![License](https://badgen.net/github/license/longpdo/neumorphism)](LICENSE)
-<a href="https://jekyll-themes.com">
-    <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
-</a>
+### [Installation Guide](https://devlopr.netlify.app/get-started)
 
-[View Demo](https://longpdo.github.io/neumorphism/) · [Report Bug](https://github.com/longpdo/neumorphism/issues) · [Request Feature](https://github.com/longpdo/neumorphism/issues)
+![devlopr jekyll](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/assets/img/screenshot.PNG?raw=true)
 
-<!-- TABLE OF CONTENTS -->
-## Table of Contents <!-- omit in toc -->
+devlopr uses Markdown Files to create data like Blog Posts, Gallery, Shop Products etc. No external database is required.
 
-* [About The Project](#about-the-project)
-  * [Built With](#built-with)
-  * [Features](#features)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-  * [Personalize and Customize](#personalize-and-customize)
-    * [_config.yml](#_configyml)
-    * [Github Metadata Plugin](#github-metadata-plugin)
-    * [_data/*.yml](#_datayml)
-    * [Particles.js](#particlesjs)
-* [Contributing](#contributing)
-* [License](#license)
-* [Acknowledgements](#acknowledgements)
+### Deploy your devlopr-jekyll blog - One Click Deploy
 
-<!-- ABOUT THE PROJECT -->
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/sujaykundu777/devlopr-jekyll)
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sujaykundu777/devlopr-jekyll)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sujaykundu777/devlopr-jekyll)
 
-## About The Project
+### Demo (Hosted Apps)
 
-[![Project Screenshot][product-screenshot]](https://longpdo.github.io/neumorphism/)
+- Github Pages Demo - [here](https://sujaykundu.com)
+- Firebase Demo - [here](https://devlopr.web.app)
+- Netlify Demo - [here](https://devlopr.netlify.com)
+- Zeit Now Demo - [here](https://devlopr-jekyll.now.sh)
+- Heroku Demo - [here](https://devlopr-jekyll.herokuapp.com)
+- AWS Amplify Demo - [here](https://master.d3t30wwddt6jju.amplifyapp.com/)
 
-This is a personal website built with `Jekyll` and hosted on `Github Pages`, which is based on the new `Neumorphism` design trend and was developed with a mobile-first approach. This can be used by developers, who want to showcase their resume and portfolio. If you want to use this for your own website, fork this repository and then refer to [personalize and customize](#personalize-and-customize).
+#### Features :
 
-### Built With
+- Local CMS Admin Support using [Jekyll Admin](https://jekyll.github.io/jekyll-admin/)
+- Onine CMS Admin Support using [Netlify CMS](https://sujaykundu.com/jekyll/2020/05/24/how-to-setup-netlify-cms-with-github-hosted-devlopr-blog/#/), Forestry, [Siteleaf](https://sujaykundu.com/jekyll/2019/05/22/using-siteleaf/), CloudCannon.
+- Supports Latest [Jekyll 4.x](https://jekyllrb.com) and [Bundler](https://bundler.io)
+- Stylesheet built using Sass
+- Comments using [Hyvor](https://talk.hyvor.com/) and [Disqus](https://disqus.com/)
+- SEO-optimized
+- Real Time Search using [Algolia](https://algolia.com/)
+- Sell Stuff (Ecommerce) in your Blog using [Snipcart](https://snipcart.com/)
+- Send Newsletters using [Mailchimp](https://mailchimp.com/)
+- Contact Forms using [Formspree](https://formspree.io/)
+- Coding Activity using [Wakatime](https://wakatime.com/)
+- Hosting Support for [Github Pages](https://pages.github.com), [Netlify](https://netlify.com), [Zeit](https://zeit.co), [Heroku](https://heroku.com), [AWS Amplify](aws.amplify.com), [Firebase](https://firebase.com)
+- CI/CD Support using [Travis CI](https://sujaykundu.com/blog/posts/deploy-jekyll-blog-using-github-pages-and-travis-ci/), Buddy , Circle CI
 
-* [Jekyll](https://jekyllrb.com/)
+#### Jekyll Admin
+You can easily manage the site locally using the Jekyll admin : [http://localhost:4000/admin](http://localhost:4000/admin)
 
-### Features
+![Jekyll Admin](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/assets/img/jekyll-admin.PNG?raw=true)
 
-* Mobile-First Responsive Design
-* Animated preloader animation
-* Landing Page with animated background with [particles.js](https://vincentgarreau.com/particles.js/), a Typing Carousel and animated social icons
-* Dark Neumorphism Design on main content
-* [Animations On Scroll](https://michalsnik.github.io/aos/)
-* Filterable *Skills* word cloud
-* [Github's API](https://developer.github.com/v3/) automatically populating the *Open Source Projects* section
-* Gulp dev workflow with [BrowserSync](https://browsersync.io/), [Autoprefixer](https://autoprefixer.github.io/) and `JS` & `SCSS` minifying.
-* [Google Analytics](https://analytics.google.com/)
+#### Search Configuration
 
-<!-- GETTING STARTED -->
+Replace *_algolia_api_key* content with your algolia's app Admin API key and run to index blog posts:
 
-## Getting Started
+`jekyll algolia`
 
-To get a local copy up and running follow these simple steps.
+For more info : [Docs here](https://sujaykundu.com/jekyll/2020/06/18/how-to-add-realtime-search-to-your-devlopr-jekyll-blog-using-jekyll-algolia/)
 
-### Prerequisites
+## Release Changes :
 
-* [NodeJS](https://nodejs.org/en/)
+You can check out the info on latest changes [here](https://www.buymeacoffee.com/p/57109)
 
-```sh
-brew install node
+## Pull the latest changes
+
+```s
+git remote -v
+git remote add upstream https://github.com/sujaykundu777/devlopr-jekyll.git
+git fetch upstream
+git checkout master
+git merge upstream/master
+git push
 ```
 
-If you need to switch between Node versions regurlarly, I would recommend to install Node via [Node Version Manager](https://github.com/nvm-sh/nvm/blob/master/README.md#manual-install).
+## Using Docker :
 
-* [Jekyll](https://jekyllrb.com/)
+Building the Image :
 
-```sh
-gem install bundler jekyll
-```
+`docker build -t my-devlopr-jekyll-blog .`
 
-For more information, refer to [this](https://jekyllrb.com/docs/installation/).
+Running the container :
 
-* [Yarn](https://yarnpkg.com/)
+`docker run -d -p 4000:4000 -it --volume="$PWD:/srv/jekyll" --name "my_blog" my-devlopr-jekyll-blog:latest jekyll serve --watch`
 
-```sh
-npm install -g yarn
-```
+## Using Docker Compose :
 
-### Installation
+### Development :
 
-> Recommended way: If you want to contribute to this theme or open issues due to problems implementing this on your own, I would recommend forking the repository directly. This makes it easier for me to solve open issues and questions or check pull requests.
+You can run the app in development mode : (your changes will be reflected --watch moded)
 
-1.1: Fork the repository (using the `Fork` button at the top) and then clone the repository
+Serve the site at http://localhost:4000 :
 
-```sh
-# Replace {YOUR_USERNAME} with your actual username
-git clone https://github.com/{YOUR_USERNAME}/neumorphism.git
-```
+`docker-compose -f docker-compose-dev.yml up --build --remove-orphans`
 
-or
+### Production :
 
-1.2: Create your own repository (using the green `Use this template` button at the top) and then clone the repository
+You can run the app in production mode : (your changes will be reflected --watch moded)
 
-```sh
-# Replace {YOUR_USERNAME}, {YOUR_REPOSITORY} with the actual values
-git clone https://github.com/{YOUR_USERNAME}/{YOUR_REPOSITORY}.git
-```
+Serve the site at http://localhost:4000 :
 
-2: Change directory into neumorphism
+`docker-compose -f docker-compose-prod.yml up --build --remove-orphans`
 
-```sh
-cd neumorphism
-```
+Stop the app :
+`docker-compose -f docker-compose-prod.yml down`
+Once everything is good and ready to go live -
 
-3: Install dependencies
+`docker-compose -f docker-compose-prod.yml up --build --detach`
 
-```sh
-yarn
-```
+## Contributors:
 
-<!-- USAGE EXAMPLES -->
+This project exists thanks to all the people who contribute.
 
-## Usage
+Contributions are more than just welcome. Fork this repo and create a new branch, then submit a pull request
 
-* Run and develop locally with live server at `http://localhost:4000`, this will also build production-ready `JS` and `SCSS` assets with every change
+- 1.Fork it [http://github.com/sujaykundu777/devlopr-jekyll/fork](http://github.com/sujaykundu777/devlopr-jekyll/fork )
 
-```sh
-gulp
-```
+- 2.Create your feature branch
+`git checkout -b my-new-feature`
 
-* After committing and pushing, see the `Settings` page of your repository to see where your site is published at via `Github Pages`.
+- 3.Commit your changes
+`git commit -am 'Add some feature'`
 
-### Personalize and Customize
+- 4.Push to the branch
+`git push origin my-new-feature`
 
-#### _config.yml
+- 5.Create new Pull Request
 
-Edit `_config.yml` to personalize your site. For documentation, refer to [docs/config.md](https://github.com/longpdo/neumorphism/blob/master/docs/config.md).
+### Backers
 
-#### Github Metadata Plugin
+Thanks to all our Backers ! 🙏 [Become a Backer](https://opencollective.com/devlopr-jekyll#backer)
 
-If you want to automatically have your Github repositories pulled for the *Open Source Projects* section, then you also need to authenticate yourself for the Github Metadata plugin to work.
+<a href="https://opencollective.com/devlopr-jekyll#backers" target="_blank"><img src="https://opencollective.com/devlopr-jekyll/backers.svg?width=890" /></a>
 
-You need to generate a new personal access token on GitHub:
+### For Help :
 
-* Go to the [Github Token site](https://github.com/settings/tokens/new)
-* Select the scope `public_repository`, and add a description.
-* Confirm and save the settings. Copy the token you see on the page.
-* Create a `.env` file inside your repository and add your generated `JEKYLL_GITHUB_TOKEN`:
+You can contact me, if you need any help via [Email](mailto:sujaykundu777@gmail.com). If you like the project. Don't forget to :star: !
 
-```text
-JEKYLL_GITHUB_TOKEN=0YOUR0GENERATED0TOKEN0
-```
+## Licence
 
-To complete the configuration for the Github Metadata plugin, you also need to change the value of `repository` inside `_config.yml`. After this, you should the Github Metadata plugin should work properly.
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT). You can do anything you want, including projects for your clients, as long as you mention an attribution back (credit links in footer). See the [Licence](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/LICENSE) file
 
-For optimal results, you should make sure, that every Github project, you want included on this portfolio, has added following informations on Github:
-
-* Description
-* Homepage link, if there is a live version of it
-* Topics
-
-Example:
-![Github Repository Information Example][github-repo-info]
-
-#### _data/*.yml
-
-Edit files inside `_data` to add information to the portfolio. For documentation, refer to [docs/data.md](https://github.com/longpdo/neumorphism/blob/master/docs/data.md).
-
-#### Particles.js
-
-Edit `assets/particles.json` to customize the landing page backgorund animation. For more information, refer to [this](https://github.com/VincentGarreau/particles.js/#options).
-
-<!-- CONTRIBUTING -->
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<!-- LICENSE -->
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## Acknowledgements
-
-* [Font Awesome](https://fontawesome.com/)
-* [Normalize.css](https://necolas.github.io/normalize.css/)
-* Based Preloader on [Codrin Pavel's](https://codepen.io/zerospree/pen/aCjAz) version
-* Typing Carousel by [Gregory Schier](https://codepen.io/gschier/pen/jkivt)
-* Social Button Animation by [Stéphane Lyver](https://codepen.io/wouwi/pen/Lwrmi)
-* Adapted [Damian Jankowski's](https://codepen.io/dolaron/pen/rNadmOE) color palette for the neumorphism design
-* Based Timeline on [Krishna Babu's](https://codepen.io/krishnab/pen/OPwqbW) version
-
-<!-- MARKDOWN LINKS & IMAGES -->
-
-[product-screenshot]: https://raw.githubusercontent.com/longpdo/neumorphism/master/docs/screenshot.gif
-[github-repo-info]: https://raw.githubusercontent.com/longpdo/neumorphism/master/docs/github-repo-info.png
+I understand that sometimes footer links or any links to external websites are not convenient, so you have the option to remove credits/footer links by becoming a [Backer](https://opencollective.com/devlopr-jekyll#backer).
