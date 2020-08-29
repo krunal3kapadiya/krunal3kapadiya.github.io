@@ -1,135 +1,207 @@
-# Lanyon
+# Neumorphism <!-- omit in toc -->
 
+> Neumorphism designed Jekyll theme for personal websites, portfolios and resumes.
 
-Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+* Featured on [JAMstack Themes](https://jamstackthemes.dev/theme/jekyll-neumorphism/)
+* Featured on [Jekyll Themes](https://jekyll-themes.com/neumorphism/)
+* Featured on [jekyllthemes](http://jekyllthemes.org/themes/neumorphism/)
 
-![Lanyon](https://f.cloud.github.com/assets/98681/1825266/be03f014-71b0-11e3-9539-876e61530e24.png)
-![Lanyon with open sidebar](https://f.cloud.github.com/assets/98681/1825267/be04a914-71b0-11e3-966f-8afe9894c729.png)
+[![Open Issues](https://badgen.net/github/open-issues/longpdo/neumorphism)](https://github.com/longpdo/neumorphism/issues)
+[![License](https://badgen.net/github/license/longpdo/neumorphism)](LICENSE)
+<a href="https://jekyll-themes.com">
+    <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
+</a>
 
+[View Demo](https://longpdo.github.io/neumorphism/) · [Report Bug](https://github.com/longpdo/neumorphism/issues) · [Request Feature](https://github.com/longpdo/neumorphism/issues)
 
-## Contents
+<!-- TABLE OF CONTENTS -->
+## Table of Contents <!-- omit in toc -->
 
-- [Usage](#usage)
-- [Options](#options)
-  - [Sidebar menu](#sidebar-menu)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-- [Development](#development)
-- [Author](#author)
-- [License](#license)
+* [About The Project](#about-the-project)
+  * [Built With](#built-with)
+  * [Features](#features)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+  * [Personalize and Customize](#personalize-and-customize)
+    * [_config.yml](#_configyml)
+    * [Github Metadata Plugin](#github-metadata-plugin)
+    * [_data/*.yml](#_datayml)
+    * [Particles.js](#particlesjs)
+* [Contributing](#contributing)
+* [License](#license)
+* [Acknowledgements](#acknowledgements)
 
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+[![Project Screenshot][product-screenshot]](https://longpdo.github.io/neumorphism/)
+
+This is a personal website built with `Jekyll` and hosted on `Github Pages`, which is based on the new `Neumorphism` design trend and was developed with a mobile-first approach. This can be used by developers, who want to showcase their resume and portfolio. If you want to use this for your own website, fork this repository and then refer to [personalize and customize](#personalize-and-customize).
+
+### Built With
+
+* [Jekyll](https://jekyllrb.com/)
+
+### Features
+
+* Mobile-First Responsive Design
+* Animated preloader animation
+* Landing Page with animated background with [particles.js](https://vincentgarreau.com/particles.js/), a Typing Carousel and animated social icons
+* Dark Neumorphism Design on main content
+* [Animations On Scroll](https://michalsnik.github.io/aos/)
+* Filterable *Skills* word cloud
+* [Github's API](https://developer.github.com/v3/) automatically populating the *Open Source Projects* section
+* Gulp dev workflow with [BrowserSync](https://browsersync.io/), [Autoprefixer](https://autoprefixer.github.io/) and `JS` & `SCSS` minifying.
+* [Google Analytics](https://analytics.google.com/)
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+
+* [NodeJS](https://nodejs.org/en/)
+
+```sh
+brew install node
+```
+
+If you need to switch between Node versions regurlarly, I would recommend to install Node via [Node Version Manager](https://github.com/nvm-sh/nvm/blob/master/README.md#manual-install).
+
+* [Jekyll](https://jekyllrb.com/)
+
+```sh
+gem install bundler jekyll
+```
+
+For more information, refer to [this](https://jekyllrb.com/docs/installation/).
+
+* [Yarn](https://yarnpkg.com/)
+
+```sh
+npm install -g yarn
+```
+
+### Installation
+
+> Recommended way: If you want to contribute to this theme or open issues due to problems implementing this on your own, I would recommend forking the repository directly. This makes it easier for me to solve open issues and questions or check pull requests.
+
+1.1: Fork the repository (using the `Fork` button at the top) and then clone the repository
+
+```sh
+# Replace {YOUR_USERNAME} with your actual username
+git clone https://github.com/{YOUR_USERNAME}/neumorphism.git
+```
+
+or
+
+1.2: Create your own repository (using the green `Use this template` button at the top) and then clone the repository
+
+```sh
+# Replace {YOUR_USERNAME}, {YOUR_REPOSITORY} with the actual values
+git clone https://github.com/{YOUR_USERNAME}/{YOUR_REPOSITORY}.git
+```
+
+2: Change directory into neumorphism
+
+```sh
+cd neumorphism
+```
+
+3: Install dependencies
+
+```sh
+yarn
+```
+
+<!-- USAGE EXAMPLES -->
 
 ## Usage
 
-Lanyon is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
+* Run and develop locally with live server at `http://localhost:4000`, this will also build production-ready `JS` and `SCSS` assets with every change
 
-
-## Options
-
-Lanyon includes some customizable options, typically applied via classes on the `<body>` element.
-
-
-### Sidebar menu
-
-Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
-
-```
----
-layout: page
-title: About
----
+```sh
+gulp
 ```
 
-**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
+* After committing and pushing, see the `Settings` page of your repository to see where your site is published at via `Github Pages`.
 
+### Personalize and Customize
 
-### Themes
+#### _config.yml
 
-Lanyon ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
+Edit `_config.yml` to personalize your site. For documentation, refer to [docs/config.md](https://github.com/longpdo/neumorphism/blob/master/docs/config.md).
 
-![Lanyon with red theme](https://f.cloud.github.com/assets/98681/1825270/be065110-71b0-11e3-9ed8-9b8de753a4af.png)
-![Lanyon with red theme and open sidebar](https://f.cloud.github.com/assets/98681/1825269/be05ec20-71b0-11e3-91ea-a9138ef07186.png)
+#### Github Metadata Plugin
 
-There are eight themes available at this time.
+If you want to automatically have your Github repositories pulled for the *Open Source Projects* section, then you also need to authenticate yourself for the Github Metadata plugin to work.
 
-![Available theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
+You need to generate a new personal access token on GitHub:
 
-To use a theme, add any one of the available theme classes to the `<body>` element in the `default.html` layout, like so:
+* Go to the [Github Token site](https://github.com/settings/tokens/new)
+* Select the scope `public_repository`, and add a description.
+* Confirm and save the settings. Copy the token you see on the page.
+* Create a `.env` file inside your repository and add your generated `JEKYLL_GITHUB_TOKEN`:
 
-```html
-<body class="theme-base-08">
-  ...
-</body>
+```text
+JEKYLL_GITHUB_TOKEN=0YOUR0GENERATED0TOKEN0
 ```
 
-To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/lanyon/blob/master/public/css/lanyon.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
+To complete the configuration for the Github Metadata plugin, you also need to change the value of `repository` inside `_config.yml`. After this, you should the Github Metadata plugin should work properly.
 
+For optimal results, you should make sure, that every Github project, you want included on this portfolio, has added following informations on Github:
 
-### Reverse layout
+* Description
+* Homepage link, if there is a live version of it
+* Topics
 
-![Lanyon with reverse layout](https://f.cloud.github.com/assets/98681/1825265/be03f2e4-71b0-11e3-89f1-360705524495.png)
-![Lanyon with reverse layout and open sidebar](https://f.cloud.github.com/assets/98681/1825268/be056174-71b0-11e3-88c8-5055bca4307f.png)
+Example:
+![Github Repository Information Example][github-repo-info]
 
-Reverse the page orientation with a single class.
+#### _data/*.yml
 
-```html
-<body class="layout-reverse">
-  ...
-</body>
-```
+Edit files inside `_data` to add information to the portfolio. For documentation, refer to [docs/data.md](https://github.com/longpdo/neumorphism/blob/master/docs/data.md).
 
+#### Particles.js
 
-### Sidebar overlay instead of push
+Edit `assets/particles.json` to customize the landing page backgorund animation. For more information, refer to [this](https://github.com/VincentGarreau/particles.js/#options).
 
-Make the sidebar overlap the viewport content with a single class:
+<!-- CONTRIBUTING -->
 
-```html
-<body class="sidebar-overlay">
-  ...
-</body>
-```
+## Contributing
 
-This will keep the content stationary and slide in the sidebar over the side content. It also adds a `box-shadow` based outline to the toggle for contrast against backgrounds, as well as a `box-shadow` on the sidebar for depth.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-It's also available for a reversed layout when you add both classes:
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-```html
-<body class="layout-reverse sidebar-overlay">
-  ...
-</body>
-```
-
-### Sidebar open on page load
-
-Show an open sidebar on page load by modifying the `<input>` tag within the `sidebar.html` layout to add the `checked` boolean attribute:
-
-```html
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked>
-```
-
-Using Liquid you can also conditionally show the sidebar open on a per-page basis. For example, here's how you could have it open on the homepage only:
-
-```html
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.title =="Home" %}checked{% endif %}>
-```
-
-## Development
-
-Lanyon has two branches, but only one is used for active development.
-
-- `master` for development.  **All pull requests should be to submitted against `master`.**
-- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
-
-
-## Author
-
-**Mark Otto**
-- <https://github.com/mdo>
-- <https://twitter.com/mdo>
-
+<!-- LICENSE -->
 
 ## License
 
-Open sourced under the [MIT license](LICENSE.md).
+Distributed under the MIT License. See `LICENSE` for more information.
 
-<3
+<!-- ACKNOWLEDGEMENTS -->
+
+## Acknowledgements
+
+* [Font Awesome](https://fontawesome.com/)
+* [Normalize.css](https://necolas.github.io/normalize.css/)
+* Based Preloader on [Codrin Pavel's](https://codepen.io/zerospree/pen/aCjAz) version
+* Typing Carousel by [Gregory Schier](https://codepen.io/gschier/pen/jkivt)
+* Social Button Animation by [Stéphane Lyver](https://codepen.io/wouwi/pen/Lwrmi)
+* Adapted [Damian Jankowski's](https://codepen.io/dolaron/pen/rNadmOE) color palette for the neumorphism design
+* Based Timeline on [Krishna Babu's](https://codepen.io/krishnab/pen/OPwqbW) version
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[product-screenshot]: https://raw.githubusercontent.com/longpdo/neumorphism/master/docs/screenshot.gif
+[github-repo-info]: https://raw.githubusercontent.com/longpdo/neumorphism/master/docs/github-repo-info.png
