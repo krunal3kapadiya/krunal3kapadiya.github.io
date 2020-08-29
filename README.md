@@ -1,143 +1,134 @@
-### devlopr-jekyll - A Beautiful Jekyll Theme Built for Developers
+# Lanyon
 
-[![Gem Version](https://badge.fury.io/rb/devlopr.svg)](https://badge.fury.io/rb/devlopr)![workflow-badge](https://github.com/sujaykundu777/devlopr-jekyll/workflows/deploy/badge.svg)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4232ac2b-63e0-4c78-92e0-e95aad5ab8c3/deploy-status)](https://app.netlify.com/sites/devlopr/deploys)
-![](https://ruby-gem-downloads-badge.herokuapp.com/devlopr?type=total&color=brightgreen&style=plastic)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
-Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup.
-The Theme supports both Light and Dark Style. Highly Customizable and No Hosting or Maintainence Cost is required !
+![Lanyon](https://f.cloud.github.com/assets/98681/1825266/be03f014-71b0-11e3-9539-876e61530e24.png)
+![Lanyon with open sidebar](https://f.cloud.github.com/assets/98681/1825267/be04a914-71b0-11e3-966f-8afe9894c729.png)
 
-### [Installation Guide](https://devlopr.netlify.app/get-started)
 
-![devlopr jekyll](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/assets/img/screenshot.PNG?raw=true)
+## Contents
 
-devlopr uses Markdown Files to create data like Blog Posts, Gallery, Shop Products etc. No external database is required.
+- [Usage](#usage)
+- [Options](#options)
+  - [Sidebar menu](#sidebar-menu)
+  - [Themes](#themes)
+  - [Reverse layout](#reverse-layout)
+- [Development](#development)
+- [Author](#author)
+- [License](#license)
 
-### Deploy your devlopr-jekyll blog - One Click Deploy
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/sujaykundu777/devlopr-jekyll)
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sujaykundu777/devlopr-jekyll)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sujaykundu777/devlopr-jekyll)
+## Usage
 
-### Demo (Hosted Apps)
+Lanyon is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
 
-- Github Pages Demo - [here](https://sujaykundu.com)
-- Firebase Demo - [here](https://devlopr.web.app)
-- Netlify Demo - [here](https://devlopr.netlify.com)
-- Zeit Now Demo - [here](https://devlopr-jekyll.now.sh)
-- Heroku Demo - [here](https://devlopr-jekyll.herokuapp.com)
-- AWS Amplify Demo - [here](https://master.d3t30wwddt6jju.amplifyapp.com/)
 
-#### Features :
+## Options
 
-- Local CMS Admin Support using [Jekyll Admin](https://jekyll.github.io/jekyll-admin/)
-- Onine CMS Admin Support using [Netlify CMS](https://sujaykundu.com/jekyll/2020/05/24/how-to-setup-netlify-cms-with-github-hosted-devlopr-blog/#/), Forestry, [Siteleaf](https://sujaykundu.com/jekyll/2019/05/22/using-siteleaf/), CloudCannon.
-- Supports Latest [Jekyll 4.x](https://jekyllrb.com) and [Bundler](https://bundler.io)
-- Stylesheet built using Sass
-- Comments using [Hyvor](https://talk.hyvor.com/) and [Disqus](https://disqus.com/)
-- SEO-optimized
-- Real Time Search using [Algolia](https://algolia.com/)
-- Sell Stuff (Ecommerce) in your Blog using [Snipcart](https://snipcart.com/)
-- Send Newsletters using [Mailchimp](https://mailchimp.com/)
-- Contact Forms using [Formspree](https://formspree.io/)
-- Coding Activity using [Wakatime](https://wakatime.com/)
-- Hosting Support for [Github Pages](https://pages.github.com), [Netlify](https://netlify.com), [Zeit](https://zeit.co), [Heroku](https://heroku.com), [AWS Amplify](aws.amplify.com), [Firebase](https://firebase.com)
-- CI/CD Support using [Travis CI](https://sujaykundu.com/blog/posts/deploy-jekyll-blog-using-github-pages-and-travis-ci/), Buddy , Circle CI
+Lanyon includes some customizable options, typically applied via classes on the `<body>` element.
 
-#### Jekyll Admin
-You can easily manage the site locally using the Jekyll admin : [http://localhost:4000/admin](http://localhost:4000/admin)
 
-![Jekyll Admin](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/assets/img/jekyll-admin.PNG?raw=true)
+### Sidebar menu
 
-#### Search Configuration
+Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
 
-Replace *_algolia_api_key* content with your algolia's app Admin API key and run to index blog posts:
-
-`jekyll algolia`
-
-For more info : [Docs here](https://sujaykundu.com/jekyll/2020/06/18/how-to-add-realtime-search-to-your-devlopr-jekyll-blog-using-jekyll-algolia/)
-
-## Release Changes :
-
-You can check out the info on latest changes [here](https://www.buymeacoffee.com/p/57109)
-
-## Pull the latest changes
-
-```s
-git remote -v
-git remote add upstream https://github.com/sujaykundu777/devlopr-jekyll.git
-git fetch upstream
-git checkout master
-git merge upstream/master
-git push
+```
+---
+layout: page
+title: About
+---
 ```
 
-## Using Docker :
+**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
 
-Building the Image :
 
-`docker build -t my-devlopr-jekyll-blog .`
+### Themes
 
-Running the container :
+Lanyon ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
 
-`docker run -d -p 4000:4000 -it --volume="$PWD:/srv/jekyll" --name "my_blog" my-devlopr-jekyll-blog:latest jekyll serve --watch`
+![Lanyon with red theme](https://f.cloud.github.com/assets/98681/1825270/be065110-71b0-11e3-9ed8-9b8de753a4af.png)
+![Lanyon with red theme and open sidebar](https://f.cloud.github.com/assets/98681/1825269/be05ec20-71b0-11e3-91ea-a9138ef07186.png)
 
-## Using Docker Compose :
+There are eight themes available at this time.
 
-### Development :
+![Available theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
 
-You can run the app in development mode : (your changes will be reflected --watch moded)
+To use a theme, add any one of the available theme classes to the `<body>` element in the `default.html` layout, like so:
 
-Serve the site at http://localhost:4000 :
+```html
+<body class="theme-base-08">
+  ...
+</body>
+```
 
-`docker-compose -f docker-compose-dev.yml up --build --remove-orphans`
+To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/lanyon/blob/master/public/css/lanyon.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
 
-### Production :
 
-You can run the app in production mode : (your changes will be reflected --watch moded)
+### Reverse layout
 
-Serve the site at http://localhost:4000 :
+![Lanyon with reverse layout](https://f.cloud.github.com/assets/98681/1825265/be03f2e4-71b0-11e3-89f1-360705524495.png)
+![Lanyon with reverse layout and open sidebar](https://f.cloud.github.com/assets/98681/1825268/be056174-71b0-11e3-88c8-5055bca4307f.png)
 
-`docker-compose -f docker-compose-prod.yml up --build --remove-orphans`
+Reverse the page orientation with a single class.
 
-Stop the app :
-`docker-compose -f docker-compose-prod.yml down`
-Once everything is good and ready to go live -
+```html
+<body class="layout-reverse">
+  ...
+</body>
+```
 
-`docker-compose -f docker-compose-prod.yml up --build --detach`
 
-## Contributors:
+### Sidebar overlay instead of push
 
-This project exists thanks to all the people who contribute.
+Make the sidebar overlap the viewport content with a single class:
 
-Contributions are more than just welcome. Fork this repo and create a new branch, then submit a pull request
+```html
+<body class="sidebar-overlay">
+  ...
+</body>
+```
 
-- 1.Fork it [http://github.com/sujaykundu777/devlopr-jekyll/fork](http://github.com/sujaykundu777/devlopr-jekyll/fork )
+This will keep the content stationary and slide in the sidebar over the side content. It also adds a `box-shadow` based outline to the toggle for contrast against backgrounds, as well as a `box-shadow` on the sidebar for depth.
 
-- 2.Create your feature branch
-`git checkout -b my-new-feature`
+It's also available for a reversed layout when you add both classes:
 
-- 3.Commit your changes
-`git commit -am 'Add some feature'`
+```html
+<body class="layout-reverse sidebar-overlay">
+  ...
+</body>
+```
 
-- 4.Push to the branch
-`git push origin my-new-feature`
+### Sidebar open on page load
 
-- 5.Create new Pull Request
+Show an open sidebar on page load by modifying the `<input>` tag within the `sidebar.html` layout to add the `checked` boolean attribute:
 
-### Backers
+```html
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked>
+```
 
-Thanks to all our Backers ! 🙏 [Become a Backer](https://opencollective.com/devlopr-jekyll#backer)
+Using Liquid you can also conditionally show the sidebar open on a per-page basis. For example, here's how you could have it open on the homepage only:
 
-<a href="https://opencollective.com/devlopr-jekyll#backers" target="_blank"><img src="https://opencollective.com/devlopr-jekyll/backers.svg?width=890" /></a>
+```html
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.title =="Home" %}checked{% endif %}>
+```
 
-### For Help :
+## Development
 
-You can contact me, if you need any help via [Email](mailto:sujaykundu777@gmail.com). If you like the project. Don't forget to :star: !
+Lanyon has two branches, but only one is used for active development.
 
-## Licence
+- `master` for development.  **All pull requests should be to submitted against `master`.**
+- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT). You can do anything you want, including projects for your clients, as long as you mention an attribution back (credit links in footer). See the [Licence](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/LICENSE) file
 
-I understand that sometimes footer links or any links to external websites are not convenient, so you have the option to remove credits/footer links by becoming a [Backer](https://opencollective.com/devlopr-jekyll#backer).
+## Author
+
+**Mark Otto**
+- <https://github.com/mdo>
+- <https://twitter.com/mdo>
+
+
+## License
+
+Open sourced under the [MIT license](LICENSE.md).
+
+<3
