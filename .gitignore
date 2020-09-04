@@ -1,8 +1,5 @@
-_site
-.sass-cache
-node_modules
-.DS_STORE
-.jekyll-cache
-.env
-.prettierignore
-.jekyll-metadata
+/public
+.firebase
+.firebaserc
+firebase.json
+/node_modules
