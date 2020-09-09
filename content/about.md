@@ -8,7 +8,7 @@ author = "Hugo Authors"
 
 Hello, I am Krunal Kapadiya. I write code in Kotlin, Java, Python. I explore things online and performing it.
 
-## [GitHub Repositories]([[https://github.com/krunal3kapadiya](https://github.com/krunal3kapadiya)](https://github.com/krunal3kapadiya))
+## [GitHub](https://github.com/krunal3kapadiya) Repositories
 
 
 - [NLP-ML-Kit]([https://github.com/krunal3kapadiya/NLP-ML-Kit]) ML Kit NLP implementations.

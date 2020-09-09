@@ -1,4 +1,4 @@
-baseURL = "https://krunal3kapadiya-app.web.app/"
+baseURL = "https://krunal3kapadiya.app/"
 languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Krunal Kapadiya"
@@ -8,17 +8,17 @@ enableEmoji = true
 enableRobotsTXT = true
 
 # Enable Disqus
-#disqusShortname = ""
+#disqusShortname = "krunal3kapadiya"
 
 # Google Analytics
-#googleAnalytics = "UA-123-45"
+#googleAnalytics = "UA-177449251-1"
 
 [params]
 title = "I'm Krunal Kapadiya"
 author = "Krunal Kapadiya"
 description = "Call me KK"
 profilePicture = "images/profile.jpg"
-keywords = ""
+keywords = "krunal3kapadiya, Krunal Kapadiya, Android developer, DataScience, Data-Science"
 favicon = "favicons/"
 customCss = []
 customJs = []
